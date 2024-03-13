@@ -1,0 +1,42 @@
+:root {
+    --blue: #6aa5c786;
+    --pink: #ca7fca86;
+    --yellow: #ece17f86;
+    --green: #6ac76a86;
+}
+
+/* ------------------------ header section --------------------------------------*/
+.navigation-section{
+    border: 1px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.cart_logo{
+    background-color: var(--blue);
+    float:right;
+}
+
+/* nav section  */
+nav {
+    padding: 10px;
+    display: flex;
+    align-content: center;
+  }
+
+  nav a {
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    border: 1px solid var(--blue);
+    margin-left: 20px;
+    width: 70px;
+
+  }
+
+  /* Style the links on hover */
+  nav a:hover {
+    background-color: var(--yellow);
+  }
+
