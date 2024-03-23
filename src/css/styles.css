@@ -40,3 +40,97 @@ nav {
     background-color: var(--yellow);
   }
 
+/* -------------- HOME PAGE ----------------------------------- */
+
+.divider h2{
+    border-bottom: 1px solid var(--blue);
+    margin: .5rem;
+}
+
+
+.started img{
+  margin-left: .5rem;
+}
+.make img{
+  margin-right: .5rem;
+}
+
+/* bottom section of home page */
+.started, .make{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+
+}
+
+.made-card {
+  border: 1px solid var(--yellow);
+  align-content: center;
+  border-radius: 5px;
+  border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    width: calc(33.33% - 20px); /* Adjust width to fit 3 cards in a row */
+    box-sizing: border-box;
+}
+
+.made_before{
+  display: flex;
+    flex-wrap: nowrap; /* Ensures cards stay in a single row */
+    justify-content: space-between; 
+}
+
+/* ----------  inventory pages ------------- */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(33.33% - 20px); /* Adjust as needed */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.card button {
+  margin-top: 1rem;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--blue);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: var(--green);
+  color: black;
+}
+
+
+.welcome{
+  align-items: center;
+  border-bottom: 2px solid var(--pink);
+  padding: .3rem;
+}

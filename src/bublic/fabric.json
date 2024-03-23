@@ -1,0 +1,34 @@
+{
+    "fabric_data": [
+      {
+        "type": "Cotton",
+        "price": 20.00,
+        "description": "Soft, breathable, and versatile, perfect for comfortable clothing and bedding with easy care.",
+        "image_url": "/bublic/images/fabric/cotten.jpg"
+      },
+      {
+        "type": "Polyester-fleece",
+        "price": 20.00,
+        "description": "Lightweight, warm, and quick-drying, ideal for activewear and outerwear in chilly conditions.",
+        "image_url": "/bublic/images/fabric/pf.jpg"
+      },
+      {
+        "type": "fleece",
+        "price": 20.00,
+        "description": " Plush and insulating, offering warmth without bulk, commonly used in jackets, sweaters, and cozy blankets.",
+        "image_url": "/bublic/images/fabric/fleece.jpg"
+      },
+      {
+        "type": "Wool",
+        "price": 20.00,
+        "description": "Naturally warm, durable, and resilient, making it a premium choice for cold-weather clothing, blankets, and upholstery.",
+        "image_url": "/bublic/images/fabric/wool.jpg"
+      },
+      {
+        "type": "minky",
+        "price": 20.00,
+        "description": "Luxuriously soft and cuddly, perfect for baby products like blankets and toys, available in a variety of colors and textures.",
+        "image_url": "/bublic/images/fabric/mink.jpg"
+      }
+    ]
+  }

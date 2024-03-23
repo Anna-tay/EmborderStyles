@@ -1,0 +1,20 @@
+{
+    "typography_data": [
+      {
+        "typography": "lobster",
+        "img": "/bublic/images/typography/lob.jpg"
+      },
+      {
+        "typography": "pasifico",
+        "img": "/bublic/images/typography/pass.jpg"
+    },
+      {
+        "typography": "marriweather",
+        "img": "/bublic/images/typography/merr.jpg"
+      },
+      {
+        "typography": "amatic sc",
+        "img": "/bublic/images/typography/ama.jpg"
+      }
+    ]
+  }

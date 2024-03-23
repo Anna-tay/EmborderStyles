@@ -1,0 +1,28 @@
+{
+    "made": [
+      {
+        "name": "CuddleSoft Baby Wrap",
+        "typography": "lobster",
+        "color": "multi color",
+        "image_link": "/bublic/images/blankets/blanket3.jpg"
+      },
+      {
+        "name": "SleepyBunny Comforter",
+        "typography": "pasifico, lobster",
+        "color": "Pink",
+        "image_link": "/bublic/images/blankets/blanket5.jpg"
+      },
+      {
+        "name": "DreamyCotton Cozy",
+        "typography": "lobster, marriweather",
+        "color": "White",
+        "image_link": "/bublic/images/blankets/blanket1.jpg"
+      },
+      {
+        "name": "LittleStar Snuggle Blanket",
+        "typography": "marriweather, lobster",
+        "color": "White",
+        "image_link": "/bublic/images/blankets/blanket4.jpg"
+      }
+    ]
+  }
