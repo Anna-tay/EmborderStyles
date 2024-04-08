@@ -6,7 +6,7 @@ export default async function typographyDetails() {
       fetch('/bublic/typography.json')
       .then(response => response.json())
       .then(product => {
-        console.log(product)
+        // console.log(product)
         //   getting the div form the document
           let list = document.querySelector('.typography_list');
 
@@ -15,7 +15,8 @@ export default async function typographyDetails() {
           cardContainer.classList.add('card-container');
 
           product.typography_data.forEach(data => {
-            console.log(data)
+
+            // console.log(data)
               const newCard = document.createElement('card');
               newCard.classList.add('card');
               newCard.id = 'typography-card'
@@ -32,30 +33,55 @@ export default async function typographyDetails() {
 
               const productInput = document.createElement('input');
               productInput.id = 'productInput';
-              productInput.name = 'productInput'
+              productInput.type = 'text'; // Assuming you want a text input
 
               const addToCart = document.createElement('button');
               addToCart.classList.add('addToCart');
               addToCart.dataset.id = data.typography;
               addToCart.innerText = 'Add to Cart';
 
+              // dropdown list
+              const dropdown = document.createElement('select');
+
+              // Define an array of color options
+              const colors = ['Black', 'White', 'Rose Red', 'Baby Blue', 'Forest Green', 'Bright Yellow', 'Orange', 'Prune Purple','Baby Pink'];
+
+              // Loop through the colors array and create an option for each color
+              colors.forEach(color => {
+                const option = document.createElement('option');
+                option.value = color; // Set the value to lowercase color name
+                option.textContent = color; // Set the display text of the option
+                dropdown.appendChild(option); // Append the option to the dropdown
+              });
+
               // Add click event listener to the button
             addToCart.addEventListener('click', function() {
-                let cartContents = getLocalStorage('so-cart');
+                let cartContents = getLocalStorage('type-cart');
                 //check to see if there was anything there
                 if (!cartContents) {
                 cartContents = [];
                 }
+
+                let nameContents = getLocalStorage('type-input');
+                if (!nameContents) {
+                  nameContents = [];
+                }
+
                 // then add the current product to the list
-                cartContents.push(data.typography);
-                setLocalStorage('so-cart', cartContents);
-                alertMessage(`${data.typography} added to cart!`);
-                window.location.href = '/inventory/fabric.html';
+                cartContents.push(data);
+                setLocalStorage('type-cart', cartContents);
+                nameContents.push({'name': productInput.value, 'color': dropdown.value });
+                setLocalStorage('type-input', nameContents);
+
+                alertMessage(`${data} added to cart!`);
+                window.location.href = '/checkout/checkout.html';
             });
+
 
               newCard.appendChild(productName)
               newCard.appendChild(productImage)
               newCard.appendChild(productInput)
+              newCard.appendChild(dropdown)
               newCard.appendChild(addToCart)
 
               cardContainer.appendChild(newCard);

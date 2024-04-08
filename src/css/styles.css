@@ -134,3 +134,53 @@ nav {
   border-bottom: 2px solid var(--pink);
   padding: .3rem;
 }
+
+/* checkout page ================================= */
+.checkoutMain{
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Two columns of equal width */
+  gap: 20px; /* Add spacing between items */
+}
+
+#checkoutForm{
+  border-right: 2px solid var(--green);
+  flex: 1;
+}
+
+#checkoutForm label{
+  padding: .5rem;
+  margin: .5rem;
+}
+
+#checkoutForm input{
+  border-right: 2px solid var(--pink);
+  padding: .5rem;
+  margin: .5rem;
+}
+
+#checkoutForm button{
+  border-right: 2px solid var(--pink);
+  padding: .5rem;
+  margin: .5rem;
+  width: 100px;
+}
+
+.checkoutCard{
+  flex: 1;
+}
+
+.product-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next row */
+  gap: 20px; /* Add spacing between items */
+}
+
+.cart-card {
+  flex: 1 1 200px;
+  width: 200px auto;
+  border: 1px solid var(--blue);
+  padding: 20px;
+  box-sizing: border-box;
+}

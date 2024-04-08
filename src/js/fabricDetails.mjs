@@ -44,17 +44,40 @@ export default async function fabricDetails() {
           addToCart.dataset.id = item.type;
           addToCart.innerText = 'Choose this Fabric';
 
+          // dropdown list
+          const dropdown = document.createElement('select');
+
+          // Define an array of color options
+          const colors = ['Light Red', 'Baby Blue', 'Light Green', 'Mustered Yellow', 'Light Purple','Light Pink'];
+
+          // Loop through the colors array and create an option for each color
+          colors.forEach(color => {
+            const option = document.createElement('option');
+            option.value = color; // Set the value to lowercase color name
+            option.textContent = color; // Set the display text of the option
+            dropdown.appendChild(option); // Append the option to the dropdown
+          });
+
           // Add click event listener to the button
           addToCart.addEventListener('click', function() {
-            let cartContents = getLocalStorage('so-cart');
+            let cartContents = getLocalStorage('fabric-cart');
             //check to see if there was anything there
             if (!cartContents) {
               cartContents = [];
             }
+
+            let fabricInputs = getLocalStorage('fabric-input');
+            //check to see if there was anything there
+            if (!fabricInputs) {
+              fabricInputs = [];
+            }
+
             // then add the current product to the list
-            cartContents.push(item.type);
-            setLocalStorage('so-cart', cartContents);
-            alertMessage(`${item.type} added to cart!`);
+            cartContents.push(item);
+            setLocalStorage('fabric-cart', cartContents);
+            fabricInputs.push({"color" : dropdown.value});
+            setLocalStorage('fabric-input', fabricInputs);
+            alertMessage(`${item} added to cart!`);
             window.location.href = '/inventory/typography.html';
           });
 
@@ -62,6 +85,7 @@ export default async function fabricDetails() {
           newCard.appendChild(productImage);
           newCard.appendChild(productPrice);
           newCard.appendChild(productDescription);
+          newCard.appendChild(dropdown);
           newCard.appendChild(addToCart);
           newCard.appendChild(instructions);
 
