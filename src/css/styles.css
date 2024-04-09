@@ -53,6 +53,7 @@ nav {
 }
 .make img{
   margin-right: .5rem;
+  width: 80%;
 }
 
 /* bottom section of home page */
@@ -91,12 +92,11 @@ nav {
 }
 
 .card {
-  width: calc(33.33% - 20px); /* Adjust as needed */
+  width: 250px; /* Adjust as needed */
   margin-bottom: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-  box-sizing: border-box;
 }
 
 .card h3 {
@@ -106,6 +106,20 @@ nav {
 .card img {
   max-width: 100%;
   height: auto;
+}
+
+.card select{
+  margin-top: .5rem;
+  width: 100%;
+  color: black;
+  font-size: medium;
+}
+
+.card input{
+  margin-top: .5rem;
+  width: 96%;
+  color: black;
+  font-size: medium;
 }
 
 .card p {
@@ -135,6 +149,16 @@ nav {
   padding: .3rem;
 }
 
+.fabric_items img{
+  width: 100px;
+}
+.fabric-card{
+  width: 200px;
+  border-bottom: 2px solid var(--pink);
+  margin-left: 2.4rem;
+  padding: .3rem;
+
+}
 /* checkout page ================================= */
 .checkoutMain{
   display: grid;
@@ -168,6 +192,11 @@ nav {
 .checkoutCard{
   flex: 1;
 }
+
+.type_items img{
+  width: 200px;
+}
+
 
 .product-list {
   list-style: none;

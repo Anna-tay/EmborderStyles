@@ -2,6 +2,23 @@
 import { setLocalStorage, getLocalStorage, alertMessage } from './utils.mjs';
 
 export default async function typographyDetails() {
+  // getting from local storage
+  const fabricItems = getLocalStorage('fabric-cart');
+  const fabricInputs = getLocalStorage('fabric-input');
+  // getting last item
+  let count = 0;
+  for (const fabricItem of fabricItems) {count++;}
+  console.log(count)
+  // adding it to html
+  let my_fabric = `
+  <div class='fabric_items fabric-card'>
+    <h2 class='card__name'>${fabricItems[count-1].type}</h2>
+    <h2 class='card__color'>Color: ${fabricInputs[count-1].color}</h2>
+    <img src='${fabricItems[count-1].image_url}' alt='${fabricItems[count-1].type}' />
+  </div>
+  `
+  document.querySelector('#chosen_fabric').innerHTML = my_fabric;
+
       // Fetching data from JSON file
       fetch('/bublic/typography.json')
       .then(response => response.json())

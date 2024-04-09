@@ -26,7 +26,8 @@ fetch('/bublic/made.json')
             const image = document.createElement('img');
             image.src = item.image_link;
             image.alt = item.name + ' Image';
-            image.style.height = '200px'; // Fixed typo: '50' to '50%'
+            image.style.width = 'auto';
+            image.style.width = '150px';
 
             card.appendChild(name);
             card.appendChild(typography);
