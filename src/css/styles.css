@@ -3,6 +3,11 @@
     --pink: #ca7fca86;
     --yellow: #ece17f86;
     --green: #6ac76a86;
+    --background: #f4fdff
+}
+
+body, head{
+  background-color: var(--background);
 }
 
 /* ------------------------ header section --------------------------------------*/
@@ -37,7 +42,20 @@ nav {
 
   /* Style the links on hover */
   nav a:hover {
-    background-color: var(--yellow);
+    background-color: var(--blue);
+  }
+
+  button{
+    color: black;
+    text-decoration: none;
+    padding: 1rem;
+    border: 1px solid var(--blue);
+    background-color: white;
+    width: 70%;
+  }
+
+  button:hover {
+    background-color: var(--green);
   }
 
 /* -------------- HOME PAGE ----------------------------------- */
@@ -162,13 +180,21 @@ nav {
 /* checkout page ================================= */
 .checkoutMain{
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Two columns of equal width */
+  grid-template-columns: 1fr 1fr 1fr; /* Two columns of equal width */
   gap: 20px; /* Add spacing between items */
+}
+
+#checkoutCard{
+  grid-column: 2/4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #checkoutForm{
   border-right: 2px solid var(--green);
-  flex: 1;
+  grid-column: 1/2;
+  grid-row: 1/2;
 }
 
 #checkoutForm label{
@@ -189,6 +215,10 @@ nav {
   width: 100px;
 }
 
+#checkoutForm button:hover{
+  background-color: var(--pink);
+}
+
 .checkoutCard{
   flex: 1;
 }
@@ -202,8 +232,8 @@ nav {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next row */
-  gap: 20px; /* Add spacing between items */
+  gap: 10px;
+  width: 300px;
 }
 
 .cart-card {
@@ -212,4 +242,68 @@ nav {
   border: 1px solid var(--blue);
   padding: 20px;
   box-sizing: border-box;
+}
+
+.totals{
+  padding: .5rem;
+  margin: .5rem;
+}
+
+/* confirm page --------- */
+
+.confirm-main{
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  gap: 20px; /* Add spacing between items */
+}
+
+#confirm-info{
+  grid-column: 2/3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#confirm-info{
+  border-right: 2px solid var(--green);
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#confirm-info label{
+  padding: .5rem;
+  margin: .5rem;
+}
+
+#confirm-info input{
+  border-right: 2px solid var(--pink);
+  padding: .5rem;
+  margin: .5rem;
+}
+
+#confirm-info button{
+  border-right: 2px solid var(--pink);
+  padding: .5rem;
+  margin: .5rem;
+  width: 100px;
+}
+
+#confirm-info button:hover{
+  background-color: var(--pink);
+}
+
+
+.type_items img{
+  width: 200px;
+}
+
+#cartTotal{
+  display: inline;
+}
+#confirm-checkout-info{
+  display: inline;
+}
+
+.user_checkout_info{
+  
 }
