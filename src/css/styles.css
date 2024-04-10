@@ -3,7 +3,7 @@
     --pink: #ca7fca86;
     --yellow: #ece17f86;
     --green: #6ac76a86;
-    --background: #f4fdff
+    --background: #f7fdff;
 }
 
 body, head{
@@ -127,6 +127,7 @@ nav {
 }
 
 .card select{
+  background-color: var(--background);
   margin-top: .5rem;
   width: 100%;
   color: black;
@@ -135,6 +136,7 @@ nav {
 
 .card input{
   margin-top: .5rem;
+  background-color: var(--background);
   width: 96%;
   color: black;
   font-size: medium;
@@ -203,6 +205,7 @@ nav {
 }
 
 #checkoutForm input{
+  background-color: var(--background);
   border-right: 2px solid var(--pink);
   padding: .5rem;
   margin: .5rem;
@@ -276,6 +279,7 @@ nav {
 }
 
 #confirm-info input{
+  background-color: var(--background);
   border-right: 2px solid var(--pink);
   padding: .5rem;
   margin: .5rem;
@@ -305,5 +309,5 @@ nav {
 }
 
 .user_checkout_info{
-  
+
 }
